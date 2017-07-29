@@ -19,6 +19,10 @@ public final class XHubMiddleware: Middleware {
             throw XHubMiddlewareError.noValidHeader
         }
         
+        guard let buffer = request.body.bytes?.array else {
+            throw XHubMiddlewareError.noValidBody
+        }
+        
         guard self.configuration.signature.match(calculatedResultFrom: buffer, with: expectedKey) else {
             throw XHubMiddlewareError.unverifiedSignature
         }
