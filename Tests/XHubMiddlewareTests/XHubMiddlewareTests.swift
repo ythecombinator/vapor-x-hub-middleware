@@ -37,6 +37,23 @@ class XHubMiddlewareTests: QuickSpec {
                     }
                 }
                 
+                it("should fail when unverified signature used in 'X-Hub-Signature' Header") {
+                    
+                    let request = self.postHTTPRequest(resultingIn: .unverifiedSignature)
+                    
+                    do {
+                        let willThrow = try middleware.respond(to: request, chainingTo: MockResponder())
+                        
+                        expect { willThrow }.to(throwError(errorType: XHubMiddlewareError.self))
+                        
+                    } catch let error as XHubMiddlewareError {
+                        expect(error.reason).to(equal("Invalid signature"))
+                        expect(error.status).to(equal(Status.unauthorized))
+                    } catch {
+                        print("Request failed: \(error)")
+                    }
+                }
+                
             }
         }
     }
