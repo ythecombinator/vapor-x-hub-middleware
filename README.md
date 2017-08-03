@@ -32,11 +32,9 @@
     <img src="https://travis-ci.org/ythecombinator/vapor-x-hub-middleware.svg?branch=master" alt="Build Status">
 </a>
 
-<a href="https://codecov.io/gh/ythecombinator/vapor-x-hub-middleware">
-    <img src="https://codecov.io/gh/ythecombinator/vapor-x-hub-middleware/branch/master/graph/badge.svg" alt="Tests Coverage">
+<a href="https://codebeat.co/projects/github-com-ythecombinator-vapor-x-hub-middleware-master">
+    <img alt="codebeat badge" src="https://codebeat.co/badges/96b2f8d3-01a8-477b-83b2-897189df5852" />
 </a>
-
-<a href="https://codebeat.co/projects/github-com-ythecombinator-vapor-x-hub-middleware-master"><img alt="codebeat badge" src="https://codebeat.co/badges/96b2f8d3-01a8-477b-83b2-897189df5852" /></a>
 
 <a href="LICENSE.md">
     <img src="http://img.shields.io/badge/license-MIT-brightgreen.svg" alt="MIT License">
@@ -53,11 +51,11 @@
 
 <!-- toc -->
 
-- [Installation](-installation)
-- [Getting Started](-getting-started)
-- [Now It Works](-now-it-works)
-- [How It Works](-how-it-works)
-- [License](-license)
+- [Installation](#-installation)
+- [Getting Started](#-getting-started)
+- [Now It Works](#-now-it-works)
+- [How It Works](#-how-it-works)
+- [License](#-license)
 
 <!-- tocstop -->
 
