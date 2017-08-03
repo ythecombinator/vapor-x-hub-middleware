@@ -36,9 +36,7 @@
     <img src="https://codecov.io/gh/ythecombinator/vapor-x-hub-middleware/branch/master/graph/badge.svg" alt="Tests Coverage">
 </a>
 
-<a href="https://codebeat.co/projects/ythecombinator/vapor-x-hub-middleware">
-    <img src="https://codebeat.co/badges/" alt="Tests Coverage">
-</a>
+<a href="https://codebeat.co/projects/github-com-ythecombinator-vapor-x-hub-middleware-master"><img alt="codebeat badge" src="https://codebeat.co/badges/96b2f8d3-01a8-477b-83b2-897189df5852" /></a>
 
 <a href="LICENSE.md">
     <img src="http://img.shields.io/badge/license-MIT-brightgreen.svg" alt="MIT License">
@@ -55,11 +53,11 @@
 
 <!-- toc -->
 
-- [📦 Installation](#%F0%9F%93%A6-installation)
-- [🚀 Getting Started](#%F0%9F%9A%80-getting-started)
-- [🎇 Now It Works](#%F0%9F%8E%87-now-it-works)
-- [🤓 How It Works](#%F0%9F%A4%93-how-it-works)
-- [⚖️ License](#%E2%9A%96%EF%B8%8F-license)
+- [Installation](-installation)
+- [Getting Started](-getting-started)
+- [Now It Works](-now-it-works)
+- [How It Works](-how-it-works)
+- [License](-license)
 
 <!-- tocstop -->
 
@@ -86,7 +84,7 @@ First of all, add the `x-hub-signature` middleware into your droplet middlewares
 {
     ...
     "middleware": [
-        "error", ← IMPORTANT
+        "error",
         "x-hub-signature",
         ...
     ],
@@ -160,16 +158,22 @@ When everything goes okay, this middleware doesn't take care of forming the
 response body –it just returns a `200` *HTTP status*–since the feedback
 given by the webhook to pushed events may vary depending on your domain.
 
-<img align="center" src="Docs/Images/Examples/200.png" alt="200 status code" width="800px">
+<p align="center"> 
+    <img align="center" src="Docs/Images/Examples/200.png" alt="200 status code" width="800px">
+</p>
 
 Now let's say that the event emitter sent a different `X-Hub-Signature` than the expected:
 
-<img align="center" src="Docs/Images/Examples/401.png" alt="401 status code" width="800px">
+<p align="center"> 
+    <img align="center" src="Docs/Images/Examples/401.png" alt="401 status code" width="800px">
+</p>
 
 Last but not least, we are also aware of malformed–without a valid `X-Hub-Signature`
 header–requests:
 
-<img align="center" src="Docs/Images/Examples/400.png" alt="400 status code" width="800px">
+<p align="center"> 
+    <img  src="Docs/Images/Examples/400.png" alt="400 status code" width="800px">
+</p>
 
 > *Yay*, for [sugary error messages](http://robotlolita.me/2016/01/09/no-i-dont-want-to-configure-your-app.html).
 
